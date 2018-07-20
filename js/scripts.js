@@ -20,78 +20,55 @@ $(document).ready(function(){
     $('#round-2').empty();
     $('#total-2').empty();
   })
+  // when the user rolls 1 on the dice
   var total=0;
   var nil=0;
+  var sum=0;
   $('button#roll-1').click(function(){
     var roll=Math.floor(Math.random()*6)+1;
     $('#dice-roll-1').text(roll);
     var rollvalue=roll;
     total+=rollvalue;
+    sum+=total;
     if (rollvalue===1) {
       alert('your turn is over')
-      $('#round-1').text(nil);
+      $('#round-1').text(nil);//makes the round total zero when the rollvalue is 1
+      $('#dice-roll-1').text(nil);
     }else {
-      $('#round-1').text(total);
+      $('#round-1').text(total);//returns the total of the round
     }
+    $('button#hold-1').click(function(){
+    $('#total-1').text(sum);
+    alert('not your turn');
+    if (sum>=100) {
+      alert('you win')
+    }
+    })
   })
   var total = 0;
   var nil = 0;
+  var sum=0;
   $('button#roll-2').click(function(){
     var roll=Math.floor(Math.random()*6)+1;
     $('#dice-roll-2').text(roll);
     var rollvalue=roll;
     total+=rollvalue;
-    // $('#round-2').text(total);
     if (rollvalue===1) {
-      alert('your turn is over')
+      alert('your turn is over');
       $('#round-2').text(nil);
+      $('#dice-roll-2').text(nil);
     }else {
       $('#round-2').text(total);
     }
+    $('button#hold-2').click(function(){
+    $('#total-2').text(sum);
+    alert('not your turn');
+    if (sum>=100) {
+      alert('you win')
+    }
   })
-  // $('button#hold-1').click(function(){
-  //   var total=+rollvalue;
-  //   $('#total-1').text(total);
-  // })
 
-  // //formula for rolling the dice
-  // var diceroll=function(){
-  //   return Math.floor(6*Math.random())+1;
-  // }
-  // //creating a constructor for the players
-  // function Player(turn){
-  //   this.roll=0;
-  //   this.rollvalue=0;
-  //   this.totalscore=0;
-  //   this.turn=turn;
-  //   this.name;
-  // }
-  // //if the player rolls a 1
-  // Player.prototype.one=function(){
-  //   if(this.roll===1){
-  //     this.rollvalue=0;
-  //     return('your turn is over')
-  //   }else {
-  //     this.rollvalue +=this.roll;
-  //   }
-  // }
-  // //when the player presses hold
-  // Player.prototype.hold=function(){
-  //   this.totalscore+=this.rollvalue;
-  //   this.rollvalue=0;
-  //   return('your turn is over');
-  // }
-  // //winning the game
-  // Player.prototype.winner=function(){
-  //   if (this.totalscore>=50) {
-  //     alert(this.name +'you won!!');
-  //   }
-  // }
-  // player1=new Player();
-  // player2=new Player();
-  // //the first player rolling the dice
-  // $('button#roll-1').click(function(){
-  //   player1=diceroll();
-  //   $('dice-roll-1').text(throwingDice);
-  // })
+})
+
+
 })
