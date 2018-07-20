@@ -20,24 +20,33 @@ $(document).ready(function(){
     $('#round-2').empty();
     $('#total-2').empty();
   })
+  var total=0;
+  var nil=0;
   $('button#roll-1').click(function(){
     var roll=Math.floor(Math.random()*6)+1;
     $('#dice-roll-1').text(roll);
     var rollvalue=roll;
+    total+=rollvalue;
     if (rollvalue===1) {
       alert('your turn is over')
+      $('#round-1').text(nil);
+    }else {
+      $('#round-1').text(total);
     }
   })
   var total = 0;
+  var nil = 0;
   $('button#roll-2').click(function(){
     var roll=Math.floor(Math.random()*6)+1;
     $('#dice-roll-2').text(roll);
     var rollvalue=roll;
     total+=rollvalue;
-    $('#round-2').text(total);
+    // $('#round-2').text(total);
     if (rollvalue===1) {
       alert('your turn is over')
-
+      $('#round-2').text(nil);
+    }else {
+      $('#round-2').text(total);
     }
   })
   // $('button#hold-1').click(function(){

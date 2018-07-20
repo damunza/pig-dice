@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pig Dice</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="jumbotron">
-      <h1>let's play a game</h1>
-      <div id="registration">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pig Dice</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1>let's play a game</h1>
+    <div id="registration">
       <form id="player-1">
         <label for="name1">player 1 enter name</label>
-        <input id="player1name"required type="text" placeholder="name">
+        <input id="player1name" required type="text" placeholder="name">
       </form>
       <form id="player-2">
         <label for="name2">player 2 enter name</label>
@@ -22,32 +24,33 @@
       </form>
       <button type="submit" id="begin" name="button">start</button>
     </div>
-      <div id="play-side">
+    <div id="play-side">
       <button type="submit" name="button" id="newgame">new game</button>
       <div class="row">
         <div class="col-6">
 
-            <button type="submit" id="roll-1" name="button">roll</button>
-            <button type="submit" id="hold-1" name="button">hold</button>
-            <h2>player-1:<span class="player1name"></span></h2>
-            <p>dice1 roll:<span id="dice-roll-1"></span></p>
-            <p>round total:<span id="round-1"></span></p>
-            <p>total score:<span id="total-1"></span></p>
+          <button type="submit" id="roll-1" name="button">roll</button>
+          <button type="submit" id="hold-1" name="button">hold</button>
+          <h2>player-1:<span class="player1name"></span></h2>
+          <p>dice1 roll:<span id="dice-roll-1"></span></p>
+          <p>round total:<span id="round-1"></span></p>
+          <p>total score:<span id="total-1"></span></p>
 
         </div>
         <div class="col-6">
 
-            <button type="submit" id="roll-2" name="button">roll</button>
-            <button type="submit" id="hold-2" name="button">hold</button>
-            <h2>player-2:<span class="player2name"></span></h2>
-            <p>dice1 roll:<span id="dice-roll-2"></span></p>
-            <p>round total:<span id="round-2"></span></p>
-            <p>total score:<span id="total-2"></span></p>
+          <button type="submit" id="roll-2" name="button">roll</button>
+          <button type="submit" id="hold-2" name="button">hold</button>
+          <h2>player-2:<span class="player2name"></span></h2>
+          <p>dice1 roll:<span id="dice-roll-2"></span></p>
+          <p>round total:<span id="round-2"></span></p>
+          <p>total score:<span id="total-2"></span></p>
 
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
