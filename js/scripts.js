@@ -28,14 +28,22 @@ $(document).ready(function(){
       alert('your turn is over')
     }
   })
+  var total = 0;
   $('button#roll-2').click(function(){
     var roll=Math.floor(Math.random()*6)+1;
     $('#dice-roll-2').text(roll);
     var rollvalue=roll;
+    total+=rollvalue;
+    $('#round-2').text(total);
     if (rollvalue===1) {
       alert('your turn is over')
+
     }
   })
+  // $('button#hold-1').click(function(){
+  //   var total=+rollvalue;
+  //   $('#total-1').text(total);
+  // })
 
   // //formula for rolling the dice
   // var diceroll=function(){
